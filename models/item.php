@@ -8,7 +8,8 @@ class Item {
     
     public function __construct($price,$shippedByName)
     {
-    	$shippedBy =  new courierFactory($shippedByName);
+    	$shippedBy   = courierFactory::create($shippedByName);
+    	$this->price = $price;
     }
 
     public function getShippmentCourier(){

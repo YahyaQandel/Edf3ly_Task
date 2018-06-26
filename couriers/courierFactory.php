@@ -11,19 +11,23 @@ class CourierFactory {
 
     public function __construct($courierName)
     {
+    	// 
+    }
+
+    public static create(){
     	switch ($courierName) {
 
 		    case "courierNumberOne":
-		        $courier = new courierNumberOne();
-		        break;
+		        return new courierNumberOne();
 
 		    case "courierNumberTwo":
-		        $courier = new courierNumberTwo();
-		        break;
+		        return new courierNumberTwo();
 
 			case "courierNumberThree":
-		        $courier = new courierNumberThree();
-		        break;
+		        return new courierNumberThree();
+
+		    default:
+        		return null;
 		}
     }
 
